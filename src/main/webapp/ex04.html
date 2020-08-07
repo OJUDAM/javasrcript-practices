@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>title</title>
+<script>
+	// 변수의 범위
+	
+	// 1. java와 같은 블록 범위(block scope)가 없다.
+	if(10 - 1> 0){
+		i =0;
+	}
+	console.log(i);
+	
+	// 2. 하지만, var를 사용하여 function scope는 있다.
+	
+	var k = 100;
+	var f = function(){
+		var k = 20;
+		console.log(k);
+		k = 100 -k;
+	}
+	f();
+	console.log(k);
+	
+	// 3. let(es6), const(ex6)는 block scope가 된다.
+	
+	
+</script>
+</head>
+<body>
+	<h1>변수의 범위</h1>
+</body>
+</html>

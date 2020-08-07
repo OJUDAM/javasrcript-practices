@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>title</title>
+<script>
+	/*
+	 변수와 데이터 타입
+	
+	 [기본타입(primitive type), 유사 객체]
+	 1.number
+	 2.boolean
+	 3.string
+	 4.undefined
+	
+	
+	 [5.객체: new 생성자 함수를 사용해서 객체를 생성]
+	 Number()  -> Object
+	 BooLean()  -> Object
+	 String()  -> Object
+	 Object()  -> Object
+	 Array()  -> Object
+	
+	 Function()  -> 6. function
+	
+	*/
+	var Goods = function(no, name){
+		 this.no = no;
+		 this.name = name;
+	 }
+	 var g = new Goods(10, 'TV');
+	 console.log(g);
+	//undefined 
+	var u;
+	//number
+	var i = 10;
+	var f = 3.14
+	//boolean
+	var b = true;
+	//string
+	var s = "Hello World";
+	 
+	//함수도 객체로 취급
+	var fn = function(){
+		console.log("Hello Function()");
+	};
+	
+	
+	console.log(u+":"+typeof(u));
+	console.log(i+":"+typeof(i));
+	console.log(f+":"+typeof(f));
+	console.log(b+":"+typeof(b));
+	console.log(s+":"+typeof(s));
+	console.log(fn+":"+typeof(fn));
+	
+	console.log("==================");
+	
+	var i2 = new Number(10);
+	var b2 = new Boolean(10);
+	var s2 = new String("halloo~");
+	var fn2 = new Function("a", "b", "return a+b");
+	var o = {};
+	var a = [];
+	
+	console.log(i2+":"+typeof(i2));
+	console.log(b2+":"+typeof(b2));
+	console.log(s2+":"+typeof(s2));
+	console.log(fn2+":"+typeof(fn2));
+	console.log(o+":"+typeof(o));
+	console.log(a+":"+typeof(a));
+
+	//원시 타입도 메소드 호출이 가능하다
+	//원시 타입의 메소드를 호출할 때, 임시 객체가 만들어 져서
+	//메소드를 호출한 다음 사라진다.
+	
+	console.log(b.valueOf());
+</script>
+</head>
+<body>
+	<h1>변수와 데이터타입</h1>
+</body>
+</html>

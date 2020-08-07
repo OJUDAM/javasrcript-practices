@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+// 함수 객체를 생성하는 방법1
+console.log("======1======");
+function f1(a, b){
+	return a+b;
+}
+
+console.log(typeof(f1),f1(10,20));
+//함수 객체를 생성하는 방법2 - 리터럴
+console.log("======2======");
+var f2 = function(a,b){
+	return a+b;
+}
+console.log(typeof(f2),f2(10,20));
+
+// 함수 객채를 생성하는 방법3 - 생성자 함수
+console.log("======3======");
+var f3 = new Function("a","b","return a+b");
+console.log(typeof(f3),f3(10,20));
+
+// 함수 객체를 생성하는 방법4 - 익명(Anonymous) 함수
+
+// callback
+setTimeout(function(){
+	console.log("call back!!!")
+},3000);
+
+console.log("!!!!!")
+</script>
+</head>
+<body>
+	<h1>함수</h1>
+</body>
+</html>

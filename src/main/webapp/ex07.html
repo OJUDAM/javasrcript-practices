@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+// 1. 생성자 함수
+var a1 = new Array();
+console.log(typeof(a1));
+
+console.log("=============");
+
+// 배열을 생성할 때 크기 지정은 의미가 없다.
+// 동적으로 크기가 늘어난다.
+var a2 = new Array(10);
+console.log(a2.length);
+a2[0] = 0;
+a2[9] = 9;
+a2[10] = 10;
+a2[12] = 12;
+console.log(a2.length);
+
+// 배열 요소에 값을 대입하지 않으면 undefined
+console.log(a2[1], a2[5]);
+
+console.log("=============");
+
+// 리터럴
+
+var a4 = [];
+console.log(typeof(a4),a4.length);
+
+var a5 = [
+	function(){
+		console.log("hello");
+	},
+	20,
+	"javaScript",
+	true,
+	null,
+	undefined,
+	{
+		name:"오주담",
+		email:"dhwnkea@gmail.com"
+	}
+];
+
+a5[0]();
+console.log(a5.length);
+
+console.log("=============");
+
+// Array VS Object
+a3 = [];
+a3[0] = 0;
+a3["1"] = 1;
+a3["name"] ="머지~?";
+console.log(a3["0"], a3[0],a3["name"],a3.length);
+for(property in a3){
+	console.log("prop: "+ property+":"+a3[property]);
+}
+
+console.log("=============");
+var o3 = {};
+o3[0] = 0;
+o3["1"] = 1;
+o3["name"] ="머지~?";
+console.log(o3["0"], o3[0],a3["name"],o3.name);
+
+
+
+</script>
+</head>
+<body>
+	<h1>배열</h1>
+</body>
+</html>
